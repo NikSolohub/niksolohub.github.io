@@ -1,14 +1,15 @@
 "use strict"
-    {
 
-        function request(url){
-            let req = await fetch(url),
-                res
-                
-            req.ok ? ()=>{res = await req.json(); return res} : console.log("Error");
+function MAIN(_){
+    console.log(_)
+}
+
+async function INIT(a){
+    let req = await fetch('config.json')
+        if(req.ok){
+            MAIN(await req.json())
         }
-
-            let conf = request('/conf.jsom')
-                console.log(conf)
-
-    }
+        else{
+            console.log(req.status)
+        }
+}
