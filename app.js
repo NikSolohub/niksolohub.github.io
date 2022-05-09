@@ -2,7 +2,7 @@
     {
 
             fetch('/conf.json', {
-                method: "POST"
+                method: "GET"
             })
                 .then(resp => resp.json())
                 .then(data => console.log(data));
