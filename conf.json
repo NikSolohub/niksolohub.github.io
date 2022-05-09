@@ -1,4 +1,18 @@
 {
     "name":"app.js",
-    "author": "Nik Solohub (https://github.com/NikSolohub)"
+    "author": "Nik Solohub (https://github.com/NikSolohub)",
+    "dependencies" : {
+        "less" : "^v4.1.2"
+    },
+    "navigation":{
+        "id":"navigation"
+    },
+    "content":{
+        "id" : "loaded_content"
+    },
+    "route":{
+        "/about":"/pages/about.html",
+        "/contacts":"/pages/contacts.html",
+        "/projects":"/pages/projects.html"
+    }
 }

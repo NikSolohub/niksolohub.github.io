@@ -1,0 +1,60 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(/fonts/OpenSans-Regular.woff2);
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: OpenSans;
+}
+
+main{
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    display: block;
+    margin: 0 auto;
+        #loaded_content{
+            width: calc( 100% - 250px);
+            float: right;
+            header{
+                font-size: 1.8em;
+                display: block;
+                padding: .5em 1em;
+            }
+            article{
+                p{
+                    text-indent: 2em;
+                    padding: .3em 0;
+                }
+            }
+        }
+}
+
+aside{
+    width: 250px;
+    height: 100vh;
+    position: relative;
+    background: #8d8d8d;
+    float: left;
+    nav{
+        position: relative;
+        width: 100%;
+        a{
+            display: block;
+            padding: 1em 0 1em 1em;
+            color: #ffffff;
+            font-size: 1em;
+            transition: background-color .3s ease;
+            &:hover{
+                background: #696969;
+            }
+        }
+    }
+}
