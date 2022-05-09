@@ -1,3 +1,5 @@
+// Developed by Nik Solohub (https://github.com/NikSolohub)
+
 "use strict"
 
     function asyncLink(url, todo){
