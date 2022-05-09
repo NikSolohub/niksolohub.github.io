@@ -1,11 +1,14 @@
 "use strict"
     {
-        let conf
-            fetch('/conf.json', {
-                method: "GET"
-            })
-                .then(resp => resp.json())
-                .then(data => {return conf = data});
-        
+
+        function request(url){
+            let req = await fetch(url),
+                res
+                
+            req.ok ? ()=>{res = await req.json(); return res} : console.log("Error");
+        }
+
+            let conf = request('/conf.jsom')
                 console.log(conf)
+
     }
