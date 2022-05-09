@@ -1,12 +1,11 @@
 "use strict"
     {
-        let conf =
+        let conf
             fetch('/conf.json', {
                 method: "GET"
             })
                 .then(resp => resp.json())
-                .then(data => {return data});
+                .then(data => {return conf = data});
         
-            console.log(conf)
 
     }
