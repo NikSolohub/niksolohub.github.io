@@ -7,5 +7,5 @@
                 .then(resp => resp.json())
                 .then(data => {return conf = data});
         
-
+                console.log(conf.name)
     }
