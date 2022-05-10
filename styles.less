@@ -58,3 +58,59 @@ aside{
         }
     }
 }
+
+
+@eclipseLoaderwidth: 160px;
+@eclipseLoaderheight: @eclipseLoaderwidth;
+
+@keyframes eclipseLoader
+ {
+    0% { transform: rotate(0deg) }
+    50% { transform: rotate(180deg) }
+    100% { transform: rotate(360deg) }
+  }
+
+  .eclipseLoader
+   div {
+    position: absolute;
+    animation: eclipseLoader
+     1s linear infinite;
+    width: @eclipseLoaderwidth;
+    height: @eclipseLoaderheight;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 0 0 #a7a7a7;
+    transform-origin: 80px 82px;
+  }
+  
+  .eclipseLoaderWrap {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: #ffffff;
+        &.global{
+            position: fixed;
+            z-index: 999999;
+            width: 100%;
+            height: 100%;
+            .eclipseLoader{
+                div{
+                    top: calc(~'50% - @{eclipseLoaderheight}/2');
+                    left: calc(~'50% - @{eclipseLoaderwidth}/2');
+                }
+            }
+        }
+  }
+  .eclipseLoader
+   {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+  }
+  .eclipseLoader
+   div { box-sizing: content-box; }
