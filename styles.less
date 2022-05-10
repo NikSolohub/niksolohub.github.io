@@ -20,9 +20,14 @@ main{
     min-height: 700px;
     display: block;
     margin: 0 auto;
-        #loaded_content{
+        #loaded_content_wrap{
+            display: block;
+            position: relative;
             width: calc( 100% - 250px);
             float: right;
+        #loaded_content{
+            position: relative;
+            width: 100%;
             header{
                 font-size: 2em;
                 padding: .5em 1em;
@@ -37,6 +42,7 @@ main{
                 }
             }
         }
+    }
 }
 
 aside{
@@ -92,7 +98,7 @@ aside{
     display: inline-block;
     overflow: hidden;
     background: #ffffff;
-        &.global{
+        &#gLdr{
             position: fixed;
             z-index: 999999;
             width: 100%;
@@ -104,6 +110,22 @@ aside{
                 }
             }
         }
+
+        &#loadingcontent{
+            position: fixed;
+            z-index: 999999;
+            width: 100%;
+            height: 100%;
+            .eclipseLoader{
+                div{
+                    top: calc(~'50% - @{eclipseLoaderheight}/2');
+                    left: calc(~'50% - @{eclipseLoaderwidth}/2');
+                }
+            }
+            display: none;
+        }
+
+
   }
   .eclipseLoader
    {

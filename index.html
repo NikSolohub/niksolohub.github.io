@@ -16,12 +16,18 @@
         <meta http-equiv="Expires" content="0" />
 
                 <title>Nik Solohub - Github.io</title>
-                
+                <script>
+
+window.addEventListener('DOMContentLoaded', (event) => {
+        console.log('DOM fully loaded and parsed');
+    });
+    
+                </script>
                 <link rel="stylesheet/less" type="text/css" href="styles.less" />
                 <script src="less.js"></script>
     </head>
     <body>
-        <div class="eclipseLoaderWrap global" id="gLdr"><div class="eclipseLoader">
+        <div class="eclipseLoaderWrap" id="gLdr"><div class="eclipseLoader">
             <div>                            </div>
         </div>
     </div>
@@ -33,9 +39,15 @@
                     <a async href="/contacts">Contact</a>
                 </nav>
             </aside>
+            <div id="loaded_content_wrap">
+                <div class="eclipseLoaderWrap" id="loadingcontent"><div class="eclipseLoader">
+                    <div>                            </div>
+                </div>
+                </div>
                 <section id="loaded_content">
 
                 </section>
+            </div>
         </main>
         <footer></footer>
     </body>

@@ -2,20 +2,6 @@
 
 "use strict"
 
-    function asyncLink(url, todo){
-        if(todo)
-            fetch(url)
-                .then((resp) => {
-                   return resp.text()
-                })
-                .then((content) =>{
-                    todo(content)
-                })
-        else{
-            console.log('Second parameter for getPages(url, todo) must be given!')
-        }
-    }
-
     //Loader Display
 
     class DisplayLoading{
@@ -25,7 +11,7 @@
 
             this._en = ()=>{
                                 //ToDo when loading is enabled
-                elem.style.display = "block"
+                this.elem.style.display = "block"
             }
             this._dis = ()=>{
                                 //ToDo when loading is disabled
@@ -84,6 +70,25 @@
 
                 
     //-------------------------------------------
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        console.log('DOM fully loaded and parsed');
+    });
+
+    function asyncLink(url, todo){
+        if(todo){
+            fetch(url)
+                .then((resp) => {
+                   return resp.text()
+                })
+                .then((content) =>{
+                    todo(content)
+                })
+            }
+        else{
+            console.log('Second parameter for getPages(url, todo) must be given!')
+        }
+    }
 
 
 //MAIN FUNCTION
