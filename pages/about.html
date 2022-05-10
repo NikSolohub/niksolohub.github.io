@@ -1,6 +1,34 @@
+
+<section id="masthead">
+        <div class="profileimg"></div>
+</section>
+
 <header>Hi there !</header>
 <article>
+    <div class="profileimg flright"></div>
     <p>
         I'm Nik, i'm creater and developer. Here you can find some information about me and my projects.
     </p>
 </article>
+    <style>
+        #masthead{
+            position: relative;
+            width: 100%;
+            height: 20em;
+            background: #1e1e1e url(/storage/images/masthead.png) no-repeat left;
+            background-size: contain;
+        }
+
+        #masthead .profileimg{
+            display: block;
+            width: 14em;
+            height: 14em;
+            border-radius: 100%;
+            border: 3px solid #ffffff;
+            background: url(/storage/images/profileimg.jpg) no-repeat center;
+            background-size: cover;
+            position: absolute;
+            top: calc(50% - 7em);
+            right: 10em;
+        }
+    </style>
